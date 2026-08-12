@@ -1,0 +1,261 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Delivery - Registration</title>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background: linear-gradient(135deg, #ff6b35, #ff914d);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 30px;
+}
+
+.container {
+	width: 850px;
+	background: white;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.left-panel {
+	width: 40%;
+	background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+		url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	color: white;
+	text-align: center;
+}
+
+.left-panel h1 {
+	font-size: 38px;
+	margin-bottom: 15px;
+}
+
+.left-panel p {
+	font-size: 17px;
+	line-height: 28px;
+}
+
+.right-panel {
+	width: 60%;
+	padding: 35px;
+}
+
+.right-panel h2 {
+	text-align: center;
+	color: #ff6b35;
+	margin-bottom: 25px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 6px;
+	color: #444;
+}
+
+input, select, textarea {
+	width: 100%;
+	padding: 11px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	outline: none;
+	font-size: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+	border: 1px solid #ff6b35;
+}
+
+textarea {
+	resize: none;
+	height: 70px;
+}
+
+.row {
+	display: flex;
+	gap: 15px;
+}
+
+.row .form-group {
+	width: 50%;
+}
+
+button {
+	width: 100%;
+	padding: 13px;
+	background: #ff6b35;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 17px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+button:hover {
+	background: #e85d04;
+}
+
+.login-link {
+	text-align: center;
+	margin-top: 18px;
+}
+
+.login-link a {
+	color: #ff6b35;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.login-link a:hover {
+	text-decoration: underline;
+}
+
+@media ( max-width :900px) {
+	.container {
+		flex-direction: column;
+		width: 100%;
+	}
+	.left-panel, .right-panel {
+		width: 100%;
+	}
+	.left-panel {
+		height: 220px;
+	}
+	.row {
+		flex-direction: column;
+	}
+	.row .form-group {
+		width: 100%;
+	}
+}
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="left-panel">
+
+			<div>
+				<h1>🍔 FoodExpress</h1>
+
+				<p>Create your account and enjoy delicious food delivered to
+					your doorstep.</p>
+			</div>
+
+		</div>
+
+		<div class="right-panel">
+
+			<h2>Create Your Account</h2>
+
+			<form action="${pageContext.request.contextPath}/register" method="post">
+
+				<div class="form-group">
+					<label>Full Name</label> <input type="text" name="name"
+						placeholder="Enter your full name" required>
+				</div>
+
+				<div class="row">
+
+					<div class="form-group">
+						<label>Email</label> <input type="email" name="email"
+							placeholder="Enter email" required>
+					</div>
+
+					<div class="form-group">
+						<label>Phone Number</label> <input type="tel" name="phone"
+							placeholder="Enter phone number" pattern="[6-9][0-9]{9}"
+							maxlength="10" required>
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="form-group">
+						<label>Password</label> <input type="password" name="password"
+							placeholder="Create password" required>
+					</div>
+
+				</div>
+
+				<div class="form-group">
+					<label>Role</label> <select name="role" required>
+						<option value="">Select Role</option>
+						<option value="CUSTOMER">Customer</option>
+						<option value="ADMIN">Admin</option>
+						<option value="DELIVERY_AGENT">Delivery Agent</option>
+					</select>
+
+				</div>
+
+				<div class="form-group">
+					<label>Address</label>
+
+					<textarea name="address" placeholder="Enter your address"></textarea>
+
+				</div>
+
+				<div class="row">
+
+					<div class="form-group">
+						<label>City</label> <input type="text" name="city"
+							placeholder="Enter city">
+					</div>
+
+					<div class="form-group">
+						<label>State</label> <input type="text" name="state"
+							placeholder="Enter state">
+					</div>
+
+				</div>
+
+				<div class="form-group">
+					<label>Pincode</label> <input type="text" name="pincode"
+						placeholder="Enter pincode" pattern="[1-9][0-9]{5}" maxlength="6"
+						inputmode="numeric"
+						oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
+				</div>
+
+				<button type="submit">Create Account</button>
+
+				<div class="login-link">
+					Already have an account? <a href="${pageContext.request.contextPath}/Login.jsp">Login</a>
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

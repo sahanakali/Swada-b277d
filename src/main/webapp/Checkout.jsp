@@ -611,13 +611,9 @@ body {
 
 		<div class="nav-links">
 
-			<a href="${pageContext.request.contextPath}/Restaurant"> Home </a> <a
-				href="${pageContext.request.contextPath}/Restaurant">
-				Restaurants </a> <a href="${pageContext.request.contextPath}/Cart.jsp">
-				Cart </a> <a href="${pageContext.request.contextPath}/login.html">
-				Profile </a> <a href="${pageContext.request.contextPath}/register.html">
-				Sign Up </a> <a href="${pageContext.request.contextPath}/login.html">
-				Sign In </a>
+			<a href="Restaurant"> Home </a> <a href="Restaurant"> Restaurants
+			</a> <a href="Cart.jsp"> Cart </a> <a href="Login.jsp"> Profile </a>
+			<a href="Register.jsp"> Sign Up </a> <a href="Login.jsp"> Sign In </a>
 
 		</div>
 

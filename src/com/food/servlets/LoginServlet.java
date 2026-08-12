@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 
             System.out.println("User not found");
 
-            resp.sendRedirect("login.html?error=invalid");
+            resp.sendRedirect("Login.jsp?error=invalid");
 
             return;
         }
@@ -130,7 +130,7 @@ public class LoginServlet extends HttpServlet {
             );
 
             resp.sendRedirect(
-                    "login.html?error=invalid"
+                    "Login.jsp?error=invalid"
             );
         }
     }

@@ -279,42 +279,44 @@ body {
 }
 /* ================= NAVBAR STYLES ================= */
 .navbar {
-	background-color: #ffffff;
-	height: 70px;
-	padding: 0 60px;
+	position: sticky;
+	top: 0;
+	background: linear-gradient(90deg, #ff6b35, #ff914d);
+	padding: 15px 40px;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	align-items: center;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+	z-index: 1000;
 	margin-bottom: 20px;
 }
 
 .logo {
 	font-size: 28px;
 	font-weight: bold;
-	color: #ff5200;
+	color: #ffffff;
 }
 
 .logo span {
-	color: #333;
+	color: #ffffff;
 }
 
 .nav-links {
 	display: flex;
 	align-items: center;
-	gap: 30px;
+	gap: 25px;
 }
 
 .nav-links a {
 	text-decoration: none;
-	color: #333;
+	color: #ffffff;
 	font-size: 16px;
-	font-weight: 500;
-	transition: color 0.2s ease;
+	font-weight: bold;
+	transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
-	color: #ff5200;
+	border-bottom: 2px solid #ffffff;
 }
 </style>
 
@@ -342,15 +344,15 @@ body {
             Cart
         </a>
 
-        <a href="${pageContext.request.contextPath}/login.html">
+        <a href="${pageContext.request.contextPath}/Login.jsp">
             Profile
         </a>
 
-        <a href="${pageContext.request.contextPath}/register.html">
+        <a href="${pageContext.request.contextPath}/Register.jsp">
             Sign Up
         </a>
 
-        <a href="${pageContext.request.contextPath}/login.html">
+        <a href="${pageContext.request.contextPath}/Login.jsp">
             Sign In
         </a>
 
@@ -358,10 +360,7 @@ body {
 
 </header>
 
-
-<!-- YOUR EXISTING MENU CODE STARTS HERE -->
-
-	<div class="header">
+	<div class="restaurant-container" style="padding: 25px 60px;">
 
 		<%
 		if (restaurant != null) {

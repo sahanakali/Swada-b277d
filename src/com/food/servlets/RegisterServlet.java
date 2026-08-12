@@ -38,9 +38,9 @@ public class RegisterServlet extends HttpServlet {
 		int i = userDAOImpl.addUser(user);
 
 		if (i > 0) {
-			resp.sendRedirect("login.html");
+			resp.sendRedirect("Login.jsp");
 		} else {
-			resp.sendRedirect("register.html?error=failed");
+			resp.sendRedirect("Register.jsp?error=failed");
 		}
 	}
 }

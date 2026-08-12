@@ -418,9 +418,9 @@ body {
 			<a href="${pageContext.request.contextPath}/Restaurant"> Home </a> <a
 				href="${pageContext.request.contextPath}/Restaurant">
 				Restaurants </a> <a href="${pageContext.request.contextPath}/Cart.jsp">
-				Cart </a> <a href="${pageContext.request.contextPath}/login.html">
-				Profile </a> <a href="${pageContext.request.contextPath}/register.html">
-				Sign Up </a> <a href="${pageContext.request.contextPath}/login.html">
+				Cart </a> <a href="${pageContext.request.contextPath}/Login.jsp">
+				Profile </a> <a href="${pageContext.request.contextPath}/Register.jsp">
+				Sign Up </a> <a href="${pageContext.request.contextPath}/Login.jsp">
 				Sign In </a>
 
 		</div>
