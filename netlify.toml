@@ -1,3 +1,2 @@
-# Netlify deployment configuration for static assets
 [build]
-  publish = "src/main/webapp"
+  publish = "."
