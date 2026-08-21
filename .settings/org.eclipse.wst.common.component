@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-        
-    <wb-module deploy-name="tap_foods">
-        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="tap_foods"/>
-        <property name="java-output-path" value="/tap_foods/bin"/>
-    </wb-module>
+            
     
+    <wb-module deploy-name="Swada">
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+                
+        <property name="java-output-path" value="/Swada/bin"/>
+        <property name="context-root" value="Swada"/>
+            
+    </wb-module>
+        
+
 </project-modules>
